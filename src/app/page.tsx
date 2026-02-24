@@ -97,8 +97,8 @@ export default function Home() {
       <div className="max-w-4xl mx-auto mb-8 px-4">
         <ins className="adsbygoogle"
              style={{ display: 'block' }}
-             data-ad-client="ca-pub-2526355871112801"
-             data-ad-slot="1234567890"
+             data-ad-client="ca-pub-2526358571112801"
+             data-ad-slot="6303556295"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
@@ -161,8 +161,8 @@ export default function Home() {
       <div className="max-w-4xl mx-auto mb-8 px-4">
         <ins className="adsbygoogle"
              style={{ display: 'block' }}
-             data-ad-client="ca-pub-2526355871112801"
-             data-ad-slot="0987654321"
+             data-ad-client="ca-pub-2526358571112801"
+             data-ad-slot="6303556295"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
