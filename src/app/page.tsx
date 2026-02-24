@@ -3,6 +3,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+declare global {
+  interface Window {
+    adsbygoogle: unknown[]
+  }
+}
+
 const categories = [
   { id: 'gaming', name: '🎮 Gaming', icon: '🎮' },
   { id: 'band', name: '🎸 Band', icon: '🎸' },
@@ -69,6 +75,14 @@ export default function Home() {
     generate()
   }, [selectedCategory])
 
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    } catch (e) {
+      console.log(e)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
@@ -81,9 +95,12 @@ export default function Home() {
 
       {/* Ad Banner Top */}
       <div className="max-w-4xl mx-auto mb-8 px-4">
-        <div className="bg-slate-800/50 rounded-lg h-24 flex items-center justify-center text-slate-500 text-sm border border-slate-700">
-          Advertisement Banner (Google AdSense)
-        </div>
+        <ins className="adsbygoogle"
+             style={{ display: 'block' }}
+             data-ad-client="ca-pub-2526355871112801"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
       </div>
 
       {/* Category Selector */}
@@ -142,9 +159,12 @@ export default function Home() {
 
       {/* Ad Banner Bottom */}
       <div className="max-w-4xl mx-auto mb-8 px-4">
-        <div className="bg-slate-800/50 rounded-lg h-24 flex items-center justify-center text-slate-500 text-sm border border-slate-700">
-          Advertisement Banner (Google AdSense)
-        </div>
+        <ins className="adsbygoogle"
+             style={{ display: 'block' }}
+             data-ad-client="ca-pub-2526355871112801"
+             data-ad-slot="0987654321"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
       </div>
 
       {/* Footer */}
